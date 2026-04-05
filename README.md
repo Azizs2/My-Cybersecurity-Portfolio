@@ -1,2 +1,7 @@
 # My-Cybersecurity-Portfolio
 Technical documentation of my cybersecurity labs, PoCs, and penetration testing projects. Proof of work in action
+___
+# Malware Analysis & Threat Intelligence: njRAT Investigation
+Executed a comprehensive dynamic and static analysis of an njRAT (Bladabindi) sample to identify its infection vectors, persistence mechanisms, and command-and-control (C2) infrastructure. Utilized Triage Sandboxing to observe real-time behavior, resulting in a 10/10 risk score classification. Mapped all observed adversary behaviors to the MITRE ATT&CK framework, specifically identifying T1059 (Command and Scripting Interpreter) and T1547 (Boot or Logon Autostart Execution). Extracted critical Indicators of Compromise (IoCs), including C2 IP addresses and file hashes, to support proactive threat hunting and network defense.
+
+Technologies Used: Triage Sandbox, Static Analysis, MITRE ATT&CK Mapping, Network Traffic Analysis, IoC Extraction, Malware Reporting.
