@@ -42,7 +42,6 @@
 
 *Figure 5: Critical post-breach SIEM alert breakdown exposing the definitive account takeover event. The telemetry documents a high-severity successful authentication (Rule ID 5715 - sshd: authentication success) via a compromised local profile (analyst) mapped directly to MITRE ATT&CK T1078 (Valid Accounts) utilizing a localized Indonesian network node.*
 
-
 <!-- POSISI GAMBAR 6 -->
 ![System Artifact and Configuration Integrity Audit](Images/Detail_active_attack.png)
 
@@ -53,6 +52,15 @@
 * Active Threat Containment: Enforced instant connection termination on active sessions bound to the compromised user and dropped adversary IPs using perimeter firewalls.
 * Environment Eradication: Audited core administrative configurations (/etc/passwd and .ssh/authorized_keys) to verify backdoor absence and enforced a global credential rotation.
 * System Hardening Matrix: Engineered a comprehensive risk matrix to eliminate entry points, migrating to key-based SSH authentication, deploying Fail2ban, and integrating a ModSecurity WAF.
+
+![External Network and Web Surface Profiling](Images/application_vunereable.png)
+
+*Figure 7: Perimeter attack surface profiling using Nmap service detection and dynamic cURL header inspection. The analytics expose a critical infrastructure misconfiguration where Port 443 is operational under unencrypted HTTP architecture instead of standard SSL/TLS, alongside complete absence of defensive HTTP security headers.*
+
+<!-- POSISI GAMBAR RELEVAN -->
+![Live Forensics File System Triage](MASUKKAN_LINK_GAMBAR_DI_SINI)
+*Figure 8: Live forensics triage executing temporary file system auditing via time-based query (`-mtime -1`). This process maps active system artifacts and modified telemetry targets altered within a 24-hour window, establishing a baseline to verify environment eradication and ensure no malicious persistence mechanisms or backdoors were deployed.*
+
 
 
 
