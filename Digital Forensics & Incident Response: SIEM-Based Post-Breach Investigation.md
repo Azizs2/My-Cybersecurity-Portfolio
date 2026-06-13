@@ -53,21 +53,23 @@
 * Environment Eradication: Audited core administrative configurations (/etc/passwd and .ssh/authorized_keys) to verify backdoor absence and enforced a global credential rotation.
 * System Hardening Matrix: Engineered a comprehensive risk matrix to eliminate entry points, migrating to key-based SSH authentication, deploying Fail2ban, and integrating a ModSecurity WAF.
 
-![External Network and Web Surface Profiling](Images/application_vunereable.png)
+![Server Privilege and Access Control Isolation](Images/bukti_hak_akses_local.jpg)
 
-*Figure 7: Perimeter attack surface profiling using Nmap service detection and dynamic cURL header inspection. The analytics expose a critical infrastructure misconfiguration where Port 443 is operational under unencrypted HTTP architecture instead of standard SSL/TLS, alongside complete absence of defensive HTTP security headers.*
+*Figure 7: Host-level access control audit validating the strict "Read-Only" operational boundaries enforced during the investigation. The execution blocks unauthorized administrative commands (`Permission denied` and `analyst is not in the sudoers file`), ensuring data integrity and preserving the unaltered original state of raw forensic log evidence.*
 
-<!-- POSISI GAMBAR RELEVAN -->
-![Live Forensics File System Triage](MASUKKAN_LINK_GAMBAR_DI_SINI)
+![Live Forensics File System Triage](Images/berbasis_waktu.png)
+
 *Figure 8: Live forensics triage executing temporary file system auditing via time-based query (`-mtime -1`). This process maps active system artifacts and modified telemetry targets altered within a 24-hour window, establishing a baseline to verify environment eradication and ensure no malicious persistence mechanisms or backdoors were deployed.*
-
-
-
 
 ## Phase 4: Remediation & Security Recommendations
 * Immediate Access Hardening: Recommended changing global SSH configurations to disable password-based logins (PasswordAuthentication no) and enforcing strict cryptographic public-key authentication.
 * Automated Network Guarding: Advised the deployment and configuration of the Fail2ban module to dynamically detect and auto-block rogue external IPs exceeding threshold authentication failures.
 * Application Perimeter Defense: Proposed the integration of an open-source Web Application Firewall (ModSecurity) alongside updated SSL/TLS certificates and security headers (HSTS, CSP) to suppress malicious directory parsing.
+
+<!-- POSISI GAMBAR RELEVAN -->
+![External Network and Web Surface Profiling](Images/application_vunereable.png)
+
+*Figure 9: Perimeter attack surface profiling using Nmap service detection and dynamic cURL header inspection. The analytics expose a critical infrastructure misconfiguration where Port 443 is operational under unencrypted HTTP architecture instead of standard SSL/TLS, alongside complete absence of defensive HTTP security headers.*
 
 
 ## Summary of Digital Forensics Accomplishments
