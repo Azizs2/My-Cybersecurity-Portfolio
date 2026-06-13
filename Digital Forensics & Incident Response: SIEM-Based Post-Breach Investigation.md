@@ -13,6 +13,8 @@
 * Cross-Log Correlation: Linked distinct alert signals across syslog, sshd, and web/apache rule groups to establish a unified cross-log trail.
 * Tactic Identification: Confirmed a highly calculated "Low and Slow" adversary pattern designed to operate strictly below rule level 15 to evade automated alerts.
 
+![High Trafic](Images/Trafik_tertinggi.png)
+
 ## Phase 2: Technical Investigation & Path Analysis
 * Initial Attack Mapping: Identified external IP 124.174.26.173 executing a persistent, automated dictionary-based brute force campaign against Port 22 SSH.
 * Attack Surface Shifting: Tracked the adversary's lateral shift to application layers, detecting malicious automated web directory scans from IP 47.112.6.166 that triggered heavy HTTP 400 anomalies.
